@@ -164,7 +164,7 @@ function openTab(evt, tabName) {
 function submitForm() {
   if (document.getElementById("fullname").value == "" ||
       document.getElementById("discord").value == "" ||
-      document.getElementById("prompt").value == "" ||
+      document.getElementById("sample").value == "" ||
       document.getElementById("meme").value == "") {
     document.getElementById("success").innerText = "";
     document.getElementById("fail").innerText = "Failed to Send! One or more parameters you haven't filled in is a required parameter!";
@@ -185,7 +185,7 @@ function submitForm() {
     content = content.toString() + " - " + document.getElementById("email").value;
   }
 
-  content = content.toString() + "\n## Sample\n" + document.getElementById("sample").value;
+  content = content.toString() + "\n## Portfolio/Sample \n" + document.getElementById("sample").value;
 
   content = content.toString() + "\n## Meme\n" + document.getElementById("meme").value + "\n" + document.getElementById("finaltest").value;
 
@@ -207,13 +207,13 @@ function submitForm() {
   document.getElementById("age").value = "";
   document.getElementById("email").value = "";
   document.getElementById("discord").value = "";
-  document.getElementById("prompt").value = "";
+  document.getElementById("sample").value = "";
   document.getElementById("meme").value = "";
   document.getElementById("extra").value = "";
   document.getElementById("fullname-head").style.color = "red";
   document.getElementById("age-head").style.color = "red";
   document.getElementById("discord-head").style.color = "red";
-  document.getElementById("prompt-head").style.color = "red";
+  document.getElementById("sample-head").style.color = "red";
   document.getElementById("meme-head").style.color = "red";
 }
 
@@ -232,8 +232,8 @@ fullname.addEventListener('input', requireGeneric);
 const discord = document.getElementById("discord");
 discord.addEventListener('input', requireGeneric);
 
-const prompt = document.getElementById("prompt");
-prompt.addEventListener('input', requireGeneric);
+const sample = document.getElementById("sample");
+sample.addEventListener('input', requireGeneric);
 
 const meme = document.getElementById("meme");
 meme.addEventListener('input', requireGeneric);
