@@ -1,0 +1,124 @@
+<html>
+<style>
+@font-face {
+  font-family: "OnyxKing Generic";
+  src: url(../fonts/polygonparty.ttf) format("truetype");
+}
+head {
+  font-family: "OnyxKing Generic";
+}
+body {
+  font-family: "OnyxKing Generic";
+  background-color: white;
+  color: black;
+}
+.tab {
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  background-color: #222;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+}
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: #ccc;
+  font-size: 21px;
+}
+.tab button:hover {
+  background-color: #99aab5;
+  color: #222;
+}
+.tab button.active {
+  background-color: #179ff3;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 0px;
+  animation: fadeEffect 1s;
+  margin: 42px 0px;
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 12px;
+}
+</style>
+
+<title>A OnyxKing Website Overhaul - Blog - OnyxKing</title>
+
+<head>
+<link rel="icon" type="image/x-icon" href="https://onyxking67.github.io/onyxking-icon.ico">
+<div class="tab">
+<button class="tablinks" onclick="openTab(event, 'main')" id="defaultTab" style="margin:0px;padding:5px;"><img src="../graphics/OnyxKing_Logo.png" height=42.5/></button>
+<button class="tablinks" onclick="location.href = '../index.html'" id="home">Home</button>
+<button class="tablinks" onclick="location.href = '../ourWork.html'" id="ourWork">Our Work</button>
+<button class="tablinks" onclick="location.href = '../blog.html'" id="blog">Blog</button>
+<button class="tablinks" onclick="location.href = '../music.html'" id="albums">Music</button>
+<button class="tablinks" onclick="location.href = '../onyxgang.html'" id="ourWork">Meet the Gang</button>
+<button class="tablinks" onclick="location.href = '../devs.html'" id="aboutUs">Meet the Devs</button>
+<button class="tablinks" onclick="location.href = '../volunteering.html'" id="volunteering">Volunteer Listings</button>
+<button class="tablinks" onclick="location.href = '../contact.html'" id="contactUs">Contact Us</button>
+<button class="tablinks" onclick="location.href = '../support.html'" id="support">Support Us</button>
+<button class="tablinks" onclick="location.href = '../merch.html'" id="merch">Merch</button>
+<button class="tablinks" onclick="location.href = '../search.html'" id="search" style="margin:0px;padding:5px;float:right;"><img src="../graphics/misc/searchicon_white.png" height=42.5/></button>
+</div>
+</head>
+
+<body>
+<div id="main" class="tabcontent">
+<center><h1 style="font-size:72px;">A OnyxKing Website Overhaul</h1></center>
+<center><h1>14th October 2023 - Generalisk</h1></center>
+<h2>Hello chat, Generalisk here!</h2>
+<h2>Back in July of this year, I made the official OnyxKing website using my crappy HTML skills and GitHub. Fast forward to now, I'm STILL using GitHub but my HTML skills are not as crappy now. So now, I feel like it's time I gave the website A visual upgrade. I have went and remade the page template from the ground up & rewrote all the pages with this new template, while making adjustments to each and every page.</h2>
+<h2>One the main major changes to the site is the addition of A search page. Which means I had to go and add A whole lot of new pages, otherwise the search results would be really small.</h2>
+<h2>Speaking of new pages, we added new character pages & expanded out existing character pages. The goal here was to make those pages feel like A wiki.</h2>
+<h2>Which reminds me, you may have noticed that the "About Us" page is gone, that is because we removed it as most of it's contents have been merged with the Home page.</h2>
+<h2>I'm also very paranoid rn about forgetting something when remastering the the website so if you see something unfinished or a bug or a invalid link, please let me know.</h2>
+<h2>and thats all, peace out.</h2>
+<h2>-Generalisk</h2>
+</body>
+
+<footer>
+<a target="_blank" href="https://youtube.com/@OnyxKing"><img src="../graphics/socials/youtube_white.png" alt="OnyxKing's YouTube" width="30"/></a>
+<a target="_blank" href="https://twitter.com/OnyxKingOff"><img src="../graphics/socials/twitter_white.png" alt="OnyxKing's Twitter" width="30"/></a>
+<a target="_blank" href="https://facebook.com/OnyxKing67Offical/"><img src="../graphics/socials/facebook_white.png" alt="OnyxKing's Discord Profile" width="30"/></a>
+<a target="_blank" href="https://discord.gg/buMMER8Hgn"><img src="../graphics/socials/discord_white.png" alt="OnyxKing's Discord Server" width="30"/></a>
+<a target="_blank" href="https://steamcommunity.com/id/OnyxKing0/myworkshopfiles/"><img src="../graphics/socials/steam_white.png" alt="OnyxKing's Steam Workshop Page" width="30"/></a>
+<h3>Copyright @2023-2023 OnyxKing</h3>
+</footer>
+
+<script>
+document.getElementById("defaultTab").click();
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</html>

@@ -1,14 +1,39 @@
+<html>
 <style>
 @font-face {
-    font-family: "OnyxKing Generic";
-    src: url(../fonts/polygonparty.ttf) format("truetype");
+  font-family: "OnyxKing Generic";
+  src: url(../fonts/polygonparty.ttf) format("truetype");
 }
 body {
   font-family: "OnyxKing Generic";
+  background-color: #cdcb64;
+  color: black;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 0px;
+  animation: fadeEffect 1s;
+  margin: 42px 0px;
+}
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 </style>
 
-<body style="background-color:#d2cdc8;color:black;">
+<body>
+<div id="main" class="tabcontent">
+<h1 style="font-size:48px;"><a target="_blank" href="post-00003.html">A OnyxKing Website Overhaul</a></h1>
+<h1>14th October 2023 - Generalisk</h1>
+<h2>Hello chat, Generalisk here!</h2>
+<h2>Back in July of this year, I made the official OnyxKing website using my crappy HTML skills and GitHub. Fast forward to now, I'm STILL using GitHub but my HTML skills are not as crappy now. So now, I feel like it's time I gave the website A visual upgrade. I have went and remade the page template from the ground up & rewrote all the pages with this new template, while making adjustments to each and every page.</h2>
+<h2>One the main major changes to the site is the addition of A search page. Which means I had to go and add A whole lot of new pages, otherwise the search results would be really small.</h2>
+<h2>Speaking of new pages, we added new character pages & expanded out existing character pages. The goal here was to make those pages feel like A wiki.</h2>
+<h2>Which reminds me, you may have noticed that the "About Us" page is gone, that is because we removed it as most of it's contents have been merged with the Home page.</h2>
+<h2>I'm also very paranoid rn about forgetting something when remastering the the website so if you see something unfinished or a bug or a invalid link, please let me know.</h2>
+<h2>and thats all, peace out.</h2>
+<h2>-Generalisk</h2>
+<hr>
 <h1 style="font-size:48px;"><a target="_blank" href="post-00002.html">Zelus' theme, Evil Beneath the Surface, is NOW PUBLICLY AVAILABLE on YouTube</a></h1>
 <h1>30th August 2023 - OnyxKing67</h1>
 <h2>In 2020, we comissioned Callum Stamp, AKA Blocked Content, to make Zelus' theme. In which he made "Evil Beneath the Surface". This theme was used recurringly throughout the Revenge of Zelus arc until the end of the arc where she, of course, died. With her dead, there was no longer a reason for us to keep using her theme so we therefore stopped using it in our videos.</h2>
@@ -39,5 +64,25 @@ body {
 <h2><a target="_blank" href="../deadlink.html">Click here to submit.</a></h1>
 <img src="../graphics/renders/onyxking_and_grasshopper_collaborating.png" width="512" style="margin:15px;"/>
 </div>
-<hr>
 </body>
+
+<script>
+openTab(event, 'main');
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</html>

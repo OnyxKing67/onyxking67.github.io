@@ -1,19 +1,21 @@
 <html>
 <style>
 @font-face {
-    font-family: "OnyxKing Generic";
-    src: url(fonts/polygonparty.ttf) format("truetype");
+  font-family: "OnyxKing Generic";
+  src: url(fonts/polygonparty.ttf) format("truetype");
 }
 head {
   font-family: "OnyxKing Generic";
 }
 body {
   font-family: "OnyxKing Generic";
+  background-color: white;
+  color: black;
 }
 .tab {
   overflow: hidden;
   border-bottom: 1px solid #ccc;
-  background-color: #2c1c23;
+  background-color: #222;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -31,63 +33,90 @@ body {
   padding: 14px 16px;
   transition: 0.3s;
   color: #ccc;
+  font-size: 21px;
 }
 .tab button:hover {
   background-color: #99aab5;
+  color: #222;
 }
 .tab button.active {
   background-color: #179ff3;
 }
 .tabcontent {
   display: none;
-  padding: 6px 12px;
+  padding: 6px 0px;
   animation: fadeEffect 1s;
-  margin: 42px;
+  margin: 42px 0px;
 }
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+table, th, td {
+  border: 1px solid black;
+}
+footer {
+  background-color: black;
+  color: white;
+  padding: 12px;
+}
+.form {
+  font-size: 32px;
 }
 </style>
 
 <title>Contact Us - OnyxKing</title>
 
 <head>
-<link rel="icon" type="image/x-icon" href="onyxking-icon.ico">
+<link rel="icon" type="image/x-icon" href="https://onyxking67.github.io/onyxking-icon.ico">
 <div class="tab">
-<button class="tablinks" onclick="openTab(event, 'main')" id="defaultTab" style="margin:0px;padding:5px;"><img src="graphics/OnyxKing_Logo.png" height=42/></button>
-<button class="tablinks" onclick="location.href = 'index.html'" id="home" style="font-size:20px">Home</button>
-<button class="tablinks" onclick="location.href = 'ourWork.html'" id="ourWork" style="font-size:20px">Our Work</button>
-<button class="tablinks" onclick="location.href = 'aboutUs.html'" id="aboutUs" style="font-size:20px">About Us</button>
-<button class="tablinks" onclick="location.href = 'blog.html'" id="blog" style="font-size:20px">Blog</button>
-<button class="tablinks" onclick="location.href = 'albums.html'" id="albums" style="font-size:20px">Albums</button>
-<button class="tablinks" onclick="location.href = 'onyxgang.html'" id="ourWork" style="font-size:20px">Meet the Gang</button>
-<button class="tablinks" onclick="location.href = 'devs.html'" id="aboutUs" style="font-size:20px">Meet the Devs</button>
-<button class="tablinks" onclick="location.href = 'volunteering.html'" id="volunteering" style="font-size:20px">Volunteer Listings</button>
-<button class="tablinks" onclick="location.href = 'contact.html'" id="contactUs" style="font-size:20px">Contact Us</button>
-<button class="tablinks" onclick="location.href = 'support.html'" id="support" style="font-size:20px">Support Us</button>
+<button class="tablinks" onclick="openTab(event, 'main')" id="defaultTab" style="margin:0px;padding:5px;"><img src="graphics/OnyxKing_Logo.png" height=42.5/></button>
+<button class="tablinks" onclick="location.href = 'index.html'" id="home">Home</button>
+<button class="tablinks" onclick="location.href = 'ourWork.html'" id="ourWork">Our Work</button>
+<button class="tablinks" onclick="location.href = 'blog.html'" id="blog">Blog</button>
+<button class="tablinks" onclick="location.href = 'music.html'" id="albums">Music</button>
+<button class="tablinks" onclick="location.href = 'onyxgang.html'" id="ourWork">Meet the Gang</button>
+<button class="tablinks" onclick="location.href = 'devs.html'" id="aboutUs">Meet the Devs</button>
+<button class="tablinks" onclick="location.href = 'volunteering.html'" id="volunteering">Volunteer Listings</button>
+<button class="tablinks" onclick="location.href = 'contact.html'" id="contactUs">Contact Us</button>
+<button class="tablinks" onclick="location.href = 'support.html'" id="support">Support Us</button>
+<button class="tablinks" onclick="location.href = 'merch.html'" id="merch">Merch</button>
+<button class="tablinks" onclick="location.href = 'search.html'" id="search" style="margin:0px;padding:5px;float:right;"><img src="graphics/misc/searchicon_white.png" height=42.5/></button>
 </div>
 </head>
 
-<body style="background-color:white;color:black">
+<body>
 <div id="main" class="tabcontent">
 <center><h1 style="font-size:72px">Reach out to us</h1></center>
-<h2>If you want to discuss A sponsorship or just say hi, you can contact us through these methods:</h2>
-<h1><a target="_blank" href="onyxking67@gmail.com" target="_blank">Email OnyxKing directly (Recommended for sponsorship & other professional reasons)</a></h1>
-<h1>Contact the devs by openning <a target="_blank" href="https://discordapp.com/users/575252669443211264">A ticket through ModMail</a> on our <a target="_blank" href="https://discord.gg/buMMER8Hgn">Discord server</a> (Preferred method for non-professional messages)</h1>
-<h2>We are working on A form you can easily submit through the website, but it'll be A while before it'll be done!</h2>
-</div>
+<img src="graphics/renders/CalemPhoningElena.png" height="640" style="float:right;">
+<h2>If you wish to contact us, whether it's to discuss A sponsorship or just say hi, you can contact us through any of these methods:</h2>
+<h1>- Email OnyxKing directly at onyxking67@gmail.com (Recommended for sponsorship & other professional reasons)</h1>
+<h1>- Contact the devs by submitting through the form below (Preferred method for non-professional messages)</h1>
+<center><h1 style="font-size:48px">Form</h1></center>
+
+<center><h1 style="font-size:48px;color:green;" id="success"></h1></center>
+<div class="form">
+<label for="discord">Discord Username:</label><br>
+<input type="text" id="discord" name="discord" style="width:50%;"><br>
+<label for="discord">Subject:</label><br>
+<input type="text" id="subject" name="subject" style="width:50%;"><br>
+<label for="msg">Message:</label><br>
+<textarea id="msg" name="msg" style="height:450;width:50%;"></textarea><br>
+<button onClick="submitForm()">Submit</button>
 </div>
 
-<footer style="background-color:#12151a;padding:20px;color:white;">
-<h2>Want to reach out to me? Contact me via onyxking67@gmail.com or through my social medias</h2>
+</div>
+</div>
+</body>
+
+<footer>
 <a target="_blank" href="https://youtube.com/@OnyxKing"><img src="graphics/socials/youtube_white.png" alt="OnyxKing's YouTube" width="30"/></a>
 <a target="_blank" href="https://twitter.com/OnyxKingOff"><img src="graphics/socials/twitter_white.png" alt="OnyxKing's Twitter" width="30"/></a>
 <a target="_blank" href="https://facebook.com/OnyxKing67Offical/"><img src="graphics/socials/facebook_white.png" alt="OnyxKing's Discord Profile" width="30"/></a>
 <a target="_blank" href="https://discord.gg/buMMER8Hgn"><img src="graphics/socials/discord_white.png" alt="OnyxKing's Discord Server" width="30"/></a>
 <a target="_blank" href="https://steamcommunity.com/id/OnyxKing0/myworkshopfiles/"><img src="graphics/socials/steam_white.png" alt="OnyxKing's Steam Workshop Page" width="30"/></a>
+<h3>Copyright @2023-2023 OnyxKing</h3>
 </footer>
-</body>
 
 <script>
 document.getElementById("defaultTab").click();
@@ -106,6 +135,24 @@ function openTab(evt, tabName) {
 
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+
+function submitForm() {
+  const request = new XMLHttpRequest();
+  request.open("POST", "https://discord.com/api/webhooks/1158829974946578593/Pq-VZDDzS6LHfo8Ybg99j-LRvbx2PUikZo7nVynsE2Cmq9NJkFspte5dhnMapmv98Wj-");
+  request.setRequestHeader('Content-type', 'application/json');
+
+  const params = {
+    username: document.getElementById("discord").value,
+    avatar_url: "",
+    content: "# " + document.getElementById("subject").value + "\n" + document.getElementById("msg").value
+  }
+
+  request.send(JSON.stringify(params));
+
+  document.getElementById("success").innerText = "Form Successfully Sent!";
+  document.getElementById("subject").value = "";
+  document.getElementById("msg").value = "";
 }
 </script>
 </html>
