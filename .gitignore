@@ -1,11 +1,9 @@
 # Music Albums
 
-HiddenMemories/
 Vol1/
 
 unreleased/
 
-music/albums/hiddenmemories.html
 music/albums/vol1.html
 
 # Characters - Amelia May
@@ -31,3 +29,4 @@ graphics/conceptart/Onyxking_Reference.png
 
 # Misc
 template.psd
+*.mmpz
