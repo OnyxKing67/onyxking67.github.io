@@ -1,194 +1,10 @@
 <html>
 <style>
-@font-face {
-  font-family: "OnyxKing Generic";
-  src: url(fonts/polygonparty.ttf) format("truetype");
-}
-head {
-  font-family: "OnyxKing Generic";
-}
 body {
-  font-family: "OnyxKing Generic";
-  background-color: white;
-  color: black;
-}
-.tab {
-  overflow: hidden;
-  border-bottom: 1px solid #ccc;
-  background-color: #222;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left: 0;
-  z-index: 10;
-}
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  color: #ccc;
-  font-size: 21px;
-}
-.tab button:hover {
-  background-color: #99aab5;
-  color: #222;
-}
-.tab button.active {
-  background-color: #179ff3;
-}
-.tabcontent {
-  display: none;
-  padding: 6px 0px;
-  animation: fadeEffect 1s;
-  margin: 42px 0px;
-}
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-.collapsible {
-  background-color: #2c2f33;
-  color: #fff;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-.active, .collapsible:hover {
-  background-color: #99aab5;
-}
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #12151a;
-}
-.slideshow-container {
-  position: relative;
-}
-.mySlides {
-  display: none;
-}
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-.active, .dot:hover {
-  background-color: #717171;
-}
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-* {
-  box-sizing: border-box;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-ul li {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #ffca18;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block;
-  position: relative;
-}
-.close {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 0%;
-  padding: 12px 16px;
-  transform: translate(0%, -50%);
-  font-size: 36px;
-}
-.close:hover {background: #bbb;}
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-div.gallery:hover {
-  border: 1px solid #777;
-}
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-table, th, td {
-  border: 1px solid black;
-}
-footer {
-  background-color: black;
-  color: white;
-  padding: 12px;
+  background-image: url('assets/graphics/background/OnyxKing-2024-BGLoop.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 .blackpanel {
   background-color: black;
@@ -208,150 +24,96 @@ footer {
 <title>Home - OnyxKing</title>
 
 <head>
-<link rel="icon" type="image/x-icon" href="https://onyxking67.github.io/onyxking-icon.ico">
-<div class="tab">
-<button class="tablinks" onclick="openTab(event, 'main')" id="defaultTab" style="margin:0px;padding:5px;"><img src="graphics/OnyxKing_Logo.png" height=42.5/></button>
-<button class="tablinks" onclick="location.href = 'index.html'" id="home">Home</button>
-<button class="tablinks" onclick="location.href = 'ourWork.html'" id="ourWork">Our Work</button>
-<button class="tablinks" onclick="location.href = 'blog.html'" id="blog">Blog</button>
-<button class="tablinks" onclick="location.href = 'music.html'" id="albums">Music</button>
-<button class="tablinks" onclick="location.href = 'onyxgang.html'" id="ourWork">Meet the Gang</button>
-<button class="tablinks" onclick="location.href = 'devs.html'" id="aboutUs">Meet the Devs</button>
-<button class="tablinks" onclick="location.href = 'volunteering.html'" id="volunteering">Volunteer Listings</button>
-<button class="tablinks" onclick="location.href = 'contact.html'" id="contactUs">Contact Us</button>
-<button class="tablinks" onclick="location.href = 'support.html'" id="support">Support Us</button>
-<button class="tablinks" onclick="location.href = 'merch.html'" id="merch">Merch</button>
-<button class="tablinks" onclick="location.href = 'search.html'" id="search" style="margin:0px;padding:5px;float:right;"><img src="graphics/misc/searchicon_white.png" height=42.5/></button>
-</div>
+  <link rel="stylesheet" href="src/stylebase.css"/>
+  <link rel="stylesheet" href="src/tabs.css"/>
+  <link rel="stylesheet" href="src/gallery.css"/>
+  <link rel="stylesheet" href="src/slideshow.css"/>
+  <link rel="icon" type="image/x-icon" href="assets/onyxking-icon.ico"/>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'main')" id="defaultTab" style="margin:0px;padding:5px;"><img src="assets/graphics/showtitlecards/OnyxKing2024Logo.png" height=42.5/></button>
+    <button class="tablinks" onclick="location.href='index.html'" id="home">Home</button>
+    <button class="tablinks" onclick="location.href='ourWork.html'" id="ourWork">Our Work</button>
+    <button class="tablinks" onclick="location.href='blog.html'" id="blog">Blog</button>
+    <button class="tablinks" onclick="location.href='gallery.html'" id="gallery">Gallery</button>
+    <button class="tablinks" onclick="location.href='music.html'" id="music">Music</button>
+    <button class="tablinks" onclick="location.href='onyxgang.html'" id="onyxgang">Meet the OnyxGang</button>
+    <button class="tablinks" onclick="location.href='devs.html'" id="devs">Meet the Devs</button>
+    <button class="tablinks" onclick="location.href='volunteering.html'" id="volunteering">Volunteer Listings</button>
+    <button class="tablinks" onclick="location.href='contact.html'" id="contact">Contact Us</button>
+    <button class="tablinks" onclick="location.href='support.html'" id="support">Support Us</button>
+    <button class="tablinks" onclick="location.href='merch.html'" id="merch">Merch</button>
+  </div>
 </head>
 
 <body>
-
-<div style="position:relative;top:56px;padding:0;margin:0px;width:100%;left:0;right:0;">
-
-<div class="slideshow-container" style="left:0;right:0;width:100%;position:relative;display:inline;">
-<div class="mySlides fade">
-<div class="numbertext">1 / 1</div>
-<img src="graphics/showbackgrounds/onyxking-showreel.png" style="width:100%;"/>
-<img src="graphics/misc/transition_white.png" class="transition"/>
-</div>
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span>
-</div>
-</div>
-
-<div id="main" class="tabcontent">
-<center><img src="graphics/OnyxKing_Logo.png" height="320"/></center>
-<h1>Welcome to the world of OnyxKing, where every type of havoc happens. But don't worry, you'll get used to it. Enjoy new episodes every 2 weeks!</h1>
-<h2>OnyxKing (originally OnyxKing67) is A small team of Animators working to make content for the online world. Originally created as A series of Super Mario 64 Bloopers by Benjamin Novelli in 2014, OnyxKing has grown to surpass 175k subscribers on YouTube.</h2>
-<h2>While OnyxKing is the only series we have right now, we have some other new stuff on the way so keep an eye out.</h2>
-
-<div class="blackpanel" style="min-height:369px;">
-<center><h1>Our Channels</h1></center>
-
-<div class="gallery">
-<a target="_blank" href="https://youtube.com/@OnyxKing">
-<img src="graphics/channelicons/onyxking.jpg" alt="OnyxKing" width="512"/>
-</a>
-<div class="desc">OnyxKing</div>
-</div>
-
-<div class="gallery">
-<a target="_blank" href="https://youtube.com/@OnyxKingOST">
-<img src="graphics/channelicons/onyxkingost.jpg" alt="OnyxKing Soundtrack" width="512"/>
-</a>
-<div class="desc">OnyxKing Soundtrack</div>
-</div>
-
-<div class="gallery">
-<a target="_blank" href="https://youtube.com/@OnyxLife67">
-<img src="graphics/channelicons/onyxlife.jpg" alt="OnyxLife" width="512"/>
-</a>
-<div class="desc">OnyxLife</div>
-</div>
-</div>
-</div>
+  <img src="assets/graphics/showtitlecards/onyxking-2024-logo-animated.gif" style="width:100%"/>
+  
+  <img src="assets/graphics/misc/gradient.png" class="transition" style="width:100%"/>
+  <div style="background-color:white;position:absolute;left:0;right:0;top:1275px;">
+    <div id="main" class="tabcontent" style="margin:0px 0px;padding:0px 0px;">
+      <center><img src="assets/graphics/showtitlecards/OnyxKing2024Logo.png" height="320"></center>
+      <h1>Welcome to the world of OnyxKing, where every type of havoc happens. But don't worry, you'll get used to it. Enjoy new episodes every 2 weeks!</h1>
+      <h2>OnyxKing (originally OnyxKing67) is A small team of Animators working to make content for the online world. Originally created as A series of Super Mario 64 Bloopers by Benjamin Novelli in 2014, OnyxKing has grown to surpass 175k subscribers on YouTube.</h2>
+      <h2>While OnyxKing is the only series we have right now, we have some other new stuff on the way so keep an eye out.</h2>
+    </div>
+    <div class="blackpanel" style="min-height:369px;">
+      <center><h1>Our Channels</h1></center>
+      <div class="gallery">
+        <a target="_blank" href="https://www.youtube.com/c/OnyxKing">
+          <img src="assets/graphics/channelicons/onyxking.jpg" alt="OnyxKing" width="512"/>
+          <div class="desc" style="color:white">OnyxKing</div>
+        </a>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://youtube.com/@OnyxKingExtras">
+          <img src="assets/graphics/channelicons/onyxkingextras.png" alt="OnyxKing Extras" width="512"/>
+          <div class="desc" style="color:white">OnyxKing Extras</div>
+        </a>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://youtube.com/@OnyxKingOST">
+          <img src="assets/graphics/channelicons/onyxkingost.jpg" alt="OnyxKing Soundtrack" width="512"/>
+          <div class="desc" style="color:white">OnyxKing Soundtrack</div>
+        </a>
+      </div>
+      <div class="gallery">
+        <a target="_blank" href="https://youtube.com/@OnyxLife67">
+          <img src="assets/graphics/channelicons/onyxlife.jpg" alt="OnyxLife" width="512"/>
+          <div class="desc" style="color:white">OnyxLife</div>
+        </a>
+      </div>
+    </div>
+    <center><h1>Our Work</h1></center>
+    <div class="slideshow-container" style="left:0;right:0;width:100%;position:relative;display:inline;">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 1</div>
+          <img src="assets/graphics/showbackgrounds/onyxking-showreel.png" style="width:100%;"/>
+          <img src="assets/graphics/showtitlecards/OnyxKing2024Logo.png" style="height:125;position:absolute;bottom:15;text-align:center;display:block;right:42%;"/>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+      </div>
+    </div>
+  </div>
+  <div style="background-color:white;position:absolute;left:0;right:0;top:3725px;">
+    <div style="margin-top:50px;"></div>
+    <h1> </h1>
+  </div>
+  <div style="margin-top:2340px;"></div>
 </body>
 
 <footer>
-<a target="_blank" href="https://youtube.com/@OnyxKing"><img src="graphics/socials/youtube_white.png" alt="OnyxKing's YouTube" width="30"/></a>
-<a target="_blank" href="https://twitter.com/OnyxKingOff"><img src="graphics/socials/twitter_white.png" alt="OnyxKing's Twitter" width="30"/></a>
-<a target="_blank" href="https://facebook.com/OnyxKing67Offical/"><img src="graphics/socials/facebook_white.png" alt="OnyxKing's Discord Profile" width="30"/></a>
-<a target="_blank" href="https://discord.gg/buMMER8Hgn"><img src="graphics/socials/discord_white.png" alt="OnyxKing's Discord Server" width="30"/></a>
-<a target="_blank" href="https://steamcommunity.com/id/OnyxKing0/myworkshopfiles/"><img src="graphics/socials/steam_white.png" alt="OnyxKing's Steam Workshop Page" width="30"/></a>
-<h3>Copyright @2023-2023 OnyxKing</h3>
+  <a target="_blank" href="https://www.youtube.com/c/OnyxKing"><img src="assets/graphics/socials/youtube_white.png" alt="OnyxKing's YouTube" width="30"/></a>
+  <a target="_blank" href="https://twitter.com/OnyxKingOff"><img src="assets/graphics/socials/twitter_white.png" alt="OnyxKing's Twitter" width="30"/></a>
+  <a target="_blank" href="https://facebook.com/OnyxKing67Offical/"><img src="assets/graphics/socials/facebook_white.png" alt="OnyxKing's Discord Profile" width="30"/></a>
+  <a target="_blank" href="https://discord.gg/buMMER8Hgn"><img src="assets/graphics/socials/discord_white.png" alt="OnyxKing's Discord Server" width="30"/></a>
+  <a target="_blank" href="https://steamcommunity.com/id/OnyxKing0/myworkshopfiles/"><img src="assets/graphics/socials/steam_white.png" alt="OnyxKing's Steam Workshop Page" width="30"/></a>
+  <h3>Copyright @2023-2024 OnyxKing</h3>
 </footer>
 
-<script>
-document.getElementById("defaultTab").click();
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-var closebtns = document.getElementsByClassName("close");
-var i;
-
-for (i = 0; i < closebtns.length; i++) {
-  closebtns[i].addEventListener("click", function() {
-    this.parentElement.style.display = 'none';
-  });
-}
-</script>
+<script src="src/tabs.js"></script>
+<script src="src/slideshow.js"></script>
 </html>

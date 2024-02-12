@@ -1,137 +1,61 @@
 <html>
-<style>
-@font-face {
-  font-family: "OnyxKing Generic";
-  src: url(../fonts/polygonparty.ttf) format("truetype");
-}
-head {
-  font-family: "OnyxKing Generic";
-}
-body {
-  font-family: "OnyxKing Generic";
-  background-color: white;
-  color: black;
-}
-.tab {
-  overflow: hidden;
-  border-bottom: 1px solid #ccc;
-  background-color: #222;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left: 0;
-  z-index: 10;
-}
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  color: #ccc;
-  font-size: 21px;
-}
-.tab button:hover {
-  background-color: #99aab5;
-  color: #222;
-}
-.tab button.active {
-  background-color: #179ff3;
-}
-.tabcontent {
-  display: none;
-  padding: 6px 0px;
-  animation: fadeEffect 1s;
-  margin: 42px 0px;
-}
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-footer {
-  background-color: black;
-  color: white;
-  padding: 12px;
-}
-</style>
-
 <title>I wanna try something different this year... - Blog - OnyxKing</title>
 
 <head>
-<link rel="icon" type="image/x-icon" href="https://onyxking67.github.io/onyxking-icon.ico">
-<div class="tab">
-<button class="tablinks" onclick="openTab(event, 'main')" id="defaultTab" style="margin:0px;padding:5px;"><img src="../graphics/OnyxKing_Logo.png" height=42.5/></button>
-<button class="tablinks" onclick="location.href = '../index.html'" id="home">Home</button>
-<button class="tablinks" onclick="location.href = '../ourWork.html'" id="ourWork">Our Work</button>
-<button class="tablinks" onclick="location.href = '../blog.html'" id="blog">Blog</button>
-<button class="tablinks" onclick="location.href = '../music.html'" id="albums">Music</button>
-<button class="tablinks" onclick="location.href = '../onyxgang.html'" id="ourWork">Meet the Gang</button>
-<button class="tablinks" onclick="location.href = '../devs.html'" id="aboutUs">Meet the Devs</button>
-<button class="tablinks" onclick="location.href = '../volunteering.html'" id="volunteering">Volunteer Listings</button>
-<button class="tablinks" onclick="location.href = '../contact.html'" id="contactUs">Contact Us</button>
-<button class="tablinks" onclick="location.href = '../support.html'" id="support">Support Us</button>
-<button class="tablinks" onclick="location.href = '../merch.html'" id="merch">Merch</button>
-<button class="tablinks" onclick="location.href = '../search.html'" id="search" style="margin:0px;padding:5px;float:right;"><img src="../graphics/misc/searchicon_white.png" height=42.5/></button>
-</div>
+  <link rel="stylesheet" href="../src/stylebase.css"/>
+  <link rel="stylesheet" href="../src/tabs.css"/>
+  <link rel="icon" type="image/x-icon" href="../assets/onyxking-icon.ico"/>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'main')" id="defaultTab" style="margin:0px;padding:5px;"><img src="../assets/graphics/showtitlecards/OnyxKing2024Logo.png" height=42.5/></button>
+    <button class="tablinks" onclick="location.href='../index.html'" id="home">Home</button>
+    <button class="tablinks" onclick="location.href='../ourWork.html'" id="ourWork">Our Work</button>
+    <button class="tablinks" onclick="location.href='../blog.html'" id="blog">Blog</button>
+    <button class="tablinks" onclick="location.href='../gallery.html'" id="gallery">Gallery</button>
+    <button class="tablinks" onclick="location.href='../music.html'" id="music">Music</button>
+    <button class="tablinks" onclick="location.href='../onyxgang.html'" id="onyxgang">Meet the OnyxGang</button>
+    <button class="tablinks" onclick="location.href='../devs.html'" id="devs">Meet the Devs</button>
+    <button class="tablinks" onclick="location.href='../volunteering.html'" id="volunteering">Volunteer Listings</button>
+    <button class="tablinks" onclick="location.href='../contact.html'" id="contact">Contact Us</button>
+    <button class="tablinks" onclick="location.href='../support.html'" id="support">Support Us</button>
+    <button class="tablinks" onclick="location.href='../merch.html'" id="merch">Merch</button>
+  </div>
 </head>
 
 <body>
-<div id="main" class="tabcontent">
-<center><h1 style="font-size:72px;">I wanna try something different this year...</h1></center>
-<center><h1>20th July 2023 - OnyxKing67</h1></center>
-<img src="../graphics/renders/onyxking_and_grasshopper_collaborating.png" width="512" style="float:left;margin:15px;"/>
-<h2>Since 2020, we've been holding A annual event at the end of the year called Collabaganda, and it has been A success. This year, we wanted to add A mid-year Collabaganda but with A twist. This is Collabaganda Shorts, the same old Collabaganda but instead your submission must be A in the style of A YT Short/TikTok. How it works is simple, fans get to submit fan-made OnyxKing-themed videos but in the style of A YouTube short/TikTok & get it to appear on the channel.</h2>
-<h2>The possibilities you can do is almost endless. You can re-animate A Gianni Matragrano or A Luke Correia short with the OnyxGang, or you favourite moment from you favourite game/show, or maybe something Original (e.g Your OC VS EM64).</h2>
-<div style="float:right;">
-<video width="640" height="360" controls>
-<source src="../videos/ExampleCollabagandaShort.mp4" type="video/mp4">
-Your browser does not support the video :skull:.
-</video>
-<h3>A collabaganda short will look like this in the final video.</h3>
-</div>
-<h1>Rules</h1>
-<h2>1. Must be between 2 - 15 Seconds Long</h2>
-<h2>2. Must be an Animation.</h2>
-<h2>3. Must contain at least one OnyxKing Character.</h2>
-<h2>4. One Entry per Person</h2>
-<h2>5. This must be your work</h2>
-<h2>6. Video must be Portrait with A 9:16 ratio, 720x1280 minimum.</h2>
-<h2>7. You may feature your own OC's.</h2>
-<h2>Submissions close on the 21st of August 2023</h2>
-<h1 style="font-size:72px;"><a target="_blank" href="../deadlink.html">Click here to submit.</a></h1>
-</div>
+  <div id="main" class="tabcontent">
+    <center><h1 style="font-size:72px;">I wanna try something different this year...</h1></center>
+    <center><h1>20th July 2023 - OnyxKing67</h1></center>
+    <img src="../assets/graphics/renders/onyxking_and_grasshopper_collaborating.png" width="512" style="float:left;margin:15px;"/>
+    <h2>Since 2020, we've been holding A annual event at the end of the year called Collabaganda, and it has been A success. This year, we wanted to add A mid-year Collabaganda but with A twist. This is Collabaganda Shorts, the same old Collabaganda but instead your submission must be A in the style of A YT Short/TikTok. How it works is simple, fans get to submit fan-made OnyxKing-themed videos but in the style of A YouTube short/TikTok & get it to appear on the channel.</h2>
+    <h2>The possibilities you can do is almost endless. You can re-animate A Gianni Matragrano or A Luke Correia short with the OnyxGang, or you favourite moment from you favourite game/show, or maybe something Original (e.g Your OC VS EM64).</h2>
+    <div style="float:right;">
+      <video width="640" height="360" controls>
+        <source src="../assets/videos/ExampleCollabagandaShort.mp4" type="video/mp4">
+        Your browser does not support the video :skull:.
+      </video>
+      <h3>A collabaganda short will look like this in the final video.</h3>
+    </div>
+    <h1>Rules</h1>
+    <h2>1. Must be between 2 - 15 Seconds Long</h2>
+    <h2>2. Must be an Animation.</h2>
+    <h2>3. Must contain at least one OnyxKing Character.</h2>
+    <h2>4. One Entry per Person</h2>
+    <h2>5. This must be your work</h2>
+    <h2>6. Video must be Portrait with A 9:16 ratio, 720x1280 minimum.</h2>
+    <h2>7. You may feature your own OC's.</h2>
+    <h2>Submissions close on the 21st of August 2023</h2>
+    <h1 style="font-size:72px;"><a target="_blank" href="../deadlink.html">Click here to submit.</a></h1>
+  </div>
 </body>
 
 <footer>
-<a target="_blank" href="https://youtube.com/@OnyxKing"><img src="../graphics/socials/youtube_white.png" alt="OnyxKing's YouTube" width="30"/></a>
-<a target="_blank" href="https://twitter.com/OnyxKingOff"><img src="../graphics/socials/twitter_white.png" alt="OnyxKing's Twitter" width="30"/></a>
-<a target="_blank" href="https://facebook.com/OnyxKing67Offical/"><img src="../graphics/socials/facebook_white.png" alt="OnyxKing's Discord Profile" width="30"/></a>
-<a target="_blank" href="https://discord.gg/buMMER8Hgn"><img src="../graphics/socials/discord_white.png" alt="OnyxKing's Discord Server" width="30"/></a>
-<a target="_blank" href="https://steamcommunity.com/id/OnyxKing0/myworkshopfiles/"><img src="../graphics/socials/steam_white.png" alt="OnyxKing's Steam Workshop Page" width="30"/></a>
-<h3>Copyright @2023-2023 OnyxKing</h3>
+  <a target="_blank" href="https://www.youtube.com/c/OnyxKing"><img src="../assets/graphics/socials/youtube_white.png" alt="OnyxKing's YouTube" width="30"/></a>
+  <a target="_blank" href="https://twitter.com/OnyxKingOff"><img src="../assets/graphics/socials/twitter_white.png" alt="OnyxKing's Twitter" width="30"/></a>
+  <a target="_blank" href="https://facebook.com/OnyxKing67Offical/"><img src="../assets/graphics/socials/facebook_white.png" alt="OnyxKing's Discord Profile" width="30"/></a>
+  <a target="_blank" href="https://discord.gg/buMMER8Hgn"><img src="../assets/graphics/socials/discord_white.png" alt="OnyxKing's Discord Server" width="30"/></a>
+  <a target="_blank" href="https://steamcommunity.com/id/OnyxKing0/myworkshopfiles/"><img src="../assets/graphics/socials/steam_white.png" alt="OnyxKing's Steam Workshop Page" width="30"/></a>
+  <h3>Copyright @2023-2024 OnyxKing</h3>
 </footer>
 
-<script>
-document.getElementById("defaultTab").click();
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
+<script src="../src/tabs.js"></script>
 </html>

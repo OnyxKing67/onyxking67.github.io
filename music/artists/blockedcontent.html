@@ -1,88 +1,9 @@
 <html>
 <style>
-@font-face {
-  font-family: "OnyxKing Generic";
-  src: url(../../fonts/polygonparty.ttf) format("truetype");
-}
-head {
-  font-family: "OnyxKing Generic";
-}
 body {
-  font-family: "OnyxKing Generic";
-  background-image: url(../../graphics/albumcovers/RevengeOfZelusAlbumArt.png);
+  background-image: url(../../assets/graphics/albumcovers/RevengeOfZelusAlbumArt.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
-  color: white;
-}
-.tab {
-  overflow: hidden;
-  border-bottom: 1px solid #ccc;
-  background-color: #222;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left: 0;
-  z-index: 10;
-}
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  color: #ccc;
-  font-size: 21px;
-}
-.tab button:hover {
-  background-color: #99aab5;
-  color: #222;
-}
-.tab button.active {
-  background-color: #179ff3;
-}
-.tabcontent {
-  display: none;
-  padding: 6px 0px;
-  animation: fadeEffect 1s;
-  margin: 42px;
-}
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-div.gallery:hover {
-  border: 1px solid #777;
-}
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-table, th, td {
-  border: 1px solid white;
-}
-footer {
-  position: absolute;
-  right: 0;
-  left: 8;
-  top: 2200px;
-  background-color: white;
-  color: black;
-  padding: 12px;
 }
 .transition {
   left: 0;
@@ -92,89 +13,74 @@ footer {
   position: absolute;
   width: 100%;
 }
+table, th, td {
+  border: 1px solid white;
+}
+a {
+  color: white;
+}
 </style>
-
 <title>Blocked Content - Artists - OnyxKing</title>
 
 <head>
-<link rel="icon" type="image/x-icon" href="https://onyxking67.github.io/onyxking-icon.ico">
-<div class="tab">
-<button class="tablinks" onclick="openTab(event, 'main')" id="defaultTab" style="margin:0px;padding:5px;"><img src="../../graphics/OnyxKing_Logo.png" height=42.5/></button>
-<button class="tablinks" onclick="location.href = '../../index.html'" id="home">Home</button>
-<button class="tablinks" onclick="location.href = '../../ourWork.html'" id="ourWork">Our Work</button>
-<button class="tablinks" onclick="location.href = '../../blog.html'" id="blog">Blog</button>
-<button class="tablinks" onclick="location.href = '../../music.html'" id="albums">Music</button>
-<button class="tablinks" onclick="location.href = '../../onyxgang.html'" id="ourWork">Meet the Gang</button>
-<button class="tablinks" onclick="location.href = '../../devs.html'" id="aboutUs">Meet the Devs</button>
-<button class="tablinks" onclick="location.href = '../../volunteering.html'" id="volunteering">Volunteer Listings</button>
-<button class="tablinks" onclick="location.href = '../../contact.html'" id="contactUs">Contact Us</button>
-<button class="tablinks" onclick="location.href = '../../support.html'" id="support">Support Us</button>
-<button class="tablinks" onclick="location.href = '../../merch.html'" id="merch">Merch</button>
-<button class="tablinks" onclick="location.href = '../../search.html'" id="search" style="margin:0px;padding:5px;float:right;"><img src="../../graphics/misc/searchicon_white.png" height=42.5/></button>
-</div>
+  <link rel="stylesheet" href="../../src/stylebase.css"/>
+  <link rel="stylesheet" href="../../src/tabs.css"/>
+  <link rel="stylesheet" href="../../src/gallery.css"/>
+  <link rel="icon" type="image/x-icon" href="../../assets/onyxking-icon.ico"/>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'main')" id="defaultTab" style="margin:0px;padding:5px;"><img src="../../assets/graphics/showtitlecards/OnyxKing2024Logo.png" height=42.5/></button>
+    <button class="tablinks" onclick="location.href='../../index.html'" id="home">Home</button>
+    <button class="tablinks" onclick="location.href='../../ourWork.html'" id="ourWork">Our Work</button>
+    <button class="tablinks" onclick="location.href='../../blog.html'" id="blog">Blog</button>
+    <button class="tablinks" onclick="location.href='../../gallery.html'" id="gallery">Gallery</button>
+    <button class="tablinks" onclick="location.href='../../music.html'" id="music">Music</button>
+    <button class="tablinks" onclick="location.href='../../onyxgang.html'" id="onyxgang">Meet the OnyxGang</button>
+    <button class="tablinks" onclick="location.href='../../devs.html'" id="devs">Meet the Devs</button>
+    <button class="tablinks" onclick="location.href='../../volunteering.html'" id="volunteering">Volunteer Listings</button>
+    <button class="tablinks" onclick="location.href='../../contact.html'" id="contact">Contact Us</button>
+    <button class="tablinks" onclick="location.href='../../support.html'" id="support">Support Us</button>
+    <button class="tablinks" onclick="location.href='../../merch.html'" id="merch">Merch</button>
+  </div>
 </head>
 
-<body>
-<img class="transition" src="../../graphics/misc/transition_black.png"/>
-<div style="margin:1150px 0px;background-color:black;left:0;right:0;position:absolute;width:100%;">
-<div id="main" class="tabcontent">
-<img style="width:180px;float:left;" src="../../graphics/devpfps/blockedcontent.jpg"/>
-<h1 style="font-size:96px;">Blocked Content</h1>
-
-<div style="margin:150px;"></div>
-<h1 style="font-size:48px;">Most Popular Songs</h1>
-
-<table style="font-size:32px;width:100%;text-align:center;">
-<tr>
-<td>1</td>
-<td><a href="../albums/single-evilbeneaththesurface.html"><img src="../../graphics/albumcovers/RevengeOfZelusAlbumArt.png" height="128px"/></a></td>
-<th><a href="../albums/single-evilbeneaththesurface.html" style="text-decoration:none;color:white">Evil Beneath the Surface</a></th>
-<td>641</td>
-<td>3:59</td>
-</tr>
-</table>
-
-<h1 style="font-size:48px;">Albums</h1>
-
-<div class="gallery">
-<a href="../albums/single-evilbeneaththesurface.html">
-<img src="../../graphics/albumcovers/RevengeOfZelusAlbumArt.png"/>
-</a>
-<div class="desc" style="font-size:20px">Evil Beneath the Surface - Single</div>
-</div>
-
-<div style="margin:280px;"></div>
-</div>
-</div>
-<div style="margin:2160px 0px;background-color:black;left:0;right:0;position:absolute;width:100%;height:150;"></div>
+<body style="background-color:black;color:white;">
+  <img class="transition" src="../../assets/graphics/misc/gradient_dark.png"/>
+  <div style="margin:1150px 0px;background-color:black;left:0;right:0;position:absolute;width:100%;">
+    <div id="main" class="tabcontent">
+      <img style="width:180px;float:left;" src="../../assets/graphics/devpfps/blockedcontent.jpg"/>
+      <h1 style="font-size:96px;">Blocked Content</h1>
+      <div style="margin:150px;"></div>
+      <h1 style="font-size:48px;">Most Popular Songs</h1>
+      <table style="font-size:32px;width:100%;text-align:center;">
+        <tr>
+          <td>1</td>
+          <td><a href="../albums/single-evilbeneaththesurface.html"><img src="../../assets/graphics/albumcovers/RevengeOfZelusAlbumArt.png" height="128px"/></a></td>
+          <th><a href="../albums/single-evilbeneaththesurface.html">Evil Beneath the Surface</a></th>
+          <td><a href="../artists/blockedcontent.html">Blocked Content</a></td>
+          <td>810</td>
+          <td>3:59</td>
+        </tr>
+      </table>
+      <h1 style="font-size:48px;">Albums</h1>
+      <div class="gallery">
+        <a href="../albums/single-evilbeneaththesurface.html">
+          <img src="../../assets/graphics/albumcovers/RevengeOfZelusAlbumArt.png"/>
+        </a>
+        <div class="desc" style="font-size:20px"><a href="../albums/single-evilbeneaththesurface.html">Evil Beneath the Surface - Single</a></div>
+      </div>
+    </div>
+  </div>
+  <div style="margin:2155px 0px;background-color:black;left:0;right:0;position:absolute;width:100%;height:150;"></div>
 </body>
 
-<footer>
-<a target="_blank" href="https://youtube.com/@OnyxKing"><img src="../../graphics/socials/youtube_black.png" alt="OnyxKing's YouTube" width="30"/></a>
-<a target="_blank" href="https://twitter.com/OnyxKingOff"><img src="../../graphics/socials/twitter_black.png" alt="OnyxKing's Twitter" width="30"/></a>
-<a target="_blank" href="https://facebook.com/OnyxKing67Offical/"><img src="../../graphics/socials/facebook_black.png" alt="OnyxKing's Discord Profile" width="30"/></a>
-<a target="_blank" href="https://discord.gg/buMMER8Hgn"><img src="../../graphics/socials/discord_black.png" alt="OnyxKing's Discord Server" width="30"/></a>
-<a target="_blank" href="https://steamcommunity.com/id/OnyxKing0/myworkshopfiles/"><img src="../../graphics/socials/steam_black.png" alt="OnyxKing's Steam Workshop Page" width="30"/></a>
-<h3>Copyright @2023-2023 OnyxKing</h3>
+<footer style="background-color:white;color:black;top:2200px;">
+  <a target="_blank" href="https://www.youtube.com/c/OnyxKing"><img src="../../assets/graphics/socials/youtube_black.png" alt="OnyxKing's YouTube" width="30"/></a>
+  <a target="_blank" href="https://twitter.com/OnyxKingOff"><img src="../../assets/graphics/socials/twitter_black.png" alt="OnyxKing's Twitter" width="30"/></a>
+  <a target="_blank" href="https://facebook.com/OnyxKing67Offical/"><img src="../../assets/graphics/socials/facebook_black.png" alt="OnyxKing's Discord Profile" width="30"/></a>
+  <a target="_blank" href="https://discord.gg/buMMER8Hgn"><img src="../../assets/graphics/socials/discord_black.png" alt="OnyxKing's Discord Server" width="30"/></a>
+  <a target="_blank" href="https://steamcommunity.com/id/OnyxKing0/myworkshopfiles/"><img src="../../assets/graphics/socials/steam_black.png" alt="OnyxKing's Steam Workshop Page" width="30"/></a>
+  <h3>Copyright @2023-2024 OnyxKing</h3>
 </footer>
 
-<script>
-document.getElementById("defaultTab").click();
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
+<script src="../../src/tabs.js"></script>
 </html>
